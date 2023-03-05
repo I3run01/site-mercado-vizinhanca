@@ -26,6 +26,8 @@ export const MenubarStytle = styled.div`
     /* Note: backdrop-filter has minimal browser support */
 
     a {
+        position: relative;
+
         height: 100%;
 
         text-decoration: none;
@@ -36,10 +38,29 @@ export const MenubarStytle = styled.div`
 
         display: flex;
         align-items: center;
+
+        ::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            bottom: 12px;
+            border: 2px solid ${redThemeColor};
+            transition: .5s;
+            opacity: 0;
+        }
         
         :hover {
             cursor: pointer;
             color: ${redThemeColor};
+
+            
+
+            ::after {
+                left: 15%;
+                right: 15%;
+                opacity: 100%;
+            }
         }
     }
 
