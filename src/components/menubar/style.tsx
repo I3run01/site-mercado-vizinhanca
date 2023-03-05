@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
 export const MenubarStytle = styled.div`
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    right: 0;
+    left: 0;
 
     height: 60px;
     background-color: red;
