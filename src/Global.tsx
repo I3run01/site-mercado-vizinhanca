@@ -7,4 +7,5 @@ export const GlobalStyle = styled.div`
     right: 0;
     top: 0;
 
+
 `
